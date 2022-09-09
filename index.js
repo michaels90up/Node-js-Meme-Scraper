@@ -1,7 +1,6 @@
 import * as cheerio from 'cheerio';
 import fetch from 'node-fetch';
 
-// this one works:
 // fetch('https://memegen-link-examples-upleveled.netlify.app/')
 //   .then((response) => response.text())
 //   .then((data) => console.log(data))
@@ -18,3 +17,4 @@ let fullArray = [];
 div.each(function () {
   fullArray.push($(this).find('img').attr('src'));
 });
+let newArray = fullArray.splice(0, 10);
