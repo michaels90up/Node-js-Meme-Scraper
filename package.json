@@ -1,5 +1,5 @@
 {
-  "name": "Node-js-Meme-Scraper",
+  "name": "node-js-meme-scraper",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",

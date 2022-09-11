@@ -2,7 +2,7 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import fetch from 'node-fetch';
 
-let counter = 1;
+// let counter = 1;
 
 // fetch('https://memegen-link-examples-upleveled.netlify.app/')
 //   .then((response) => response.text())
@@ -14,15 +14,16 @@ const response = await fetch(
 );
 const fullText = await response.text();
 const $ = cheerio.load(fullText);
-let div = $('section > div');
+const div = $('section > div');
 
-let fullArray = [];
+const fullArray = [];
 
 div.each(function () {
   fullArray.push($(this).find('img').attr('src'));
 });
 
-let newArray = fullArray.splice(0, 10);
+const newArray = fullArray.splice(0, 10);
+console.log(newArray);
 
 // const getMemes = await fetch(newArray);
 //
